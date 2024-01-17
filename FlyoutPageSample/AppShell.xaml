@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FlyoutPageSample.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FlyoutPageSample"
+    Shell.FlyoutBehavior="Flyout"
+    Title="FlyoutPageSample">
+
+    <FlyoutItem Route="Home1">
+        <Tab>
+            <ShellContent Title="Home"
+                          ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Route="Home2">
+        <Tab>
+            <ShellContent Title="Home 2"
+                          ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+    </FlyoutItem>
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Padding="10">
+                <Button Text="Change Height" Clicked="Button_Clicked" HeightRequest="50" />
+            </StackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+
+</Shell>
